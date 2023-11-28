@@ -5,7 +5,7 @@ pipeline {
     
     environment {
 	DOCKER_IMAGE = 'my-python-app'
-	ARTIFICATORY_REPO_URL = 'https://hub.docker.com/repository/docker/venkymiel623/ci-cd-demo'
+	ARTIFACTORY_REPO_URL = 'https://hub.docker.com/repository/docker/venkymiel623/ci-cd-demo'
     }
     stages {
 	stage('Build Docker Image') {
