@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // Log in to Artifactory
-                    sh "docker login -u venkymiel623 -p Venkymiel"
+                    sh "docker login -u venkymiel623 -p Venkymiel ${ARTIFACTORY_REPO_URL}"
 		    // Push the Docker image to Artifactory
 		    sh "docker push ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest"
                 }
