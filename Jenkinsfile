@@ -20,7 +20,7 @@ pipeline {
 	    steps {
                 script {
                     // Tag Docker Image
-                    sh "docker tag $DOCKER_IMAGE} ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest"
+                    sh "docker tag ${DOCKER_IMAGE} ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest"
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
                     // Log in to Artifactory
                     sh "docker login -u savenkateswarlu02@gmail.com -p Venky&Ammu143 ${ARTIFACTORY_REPO_URL}"
 		    // Push the Docker image to Artifactory
-		    sh "docker push $ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest"
+		    sh "docker push ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest"
                 }
             }
         }
