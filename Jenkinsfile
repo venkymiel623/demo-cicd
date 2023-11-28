@@ -12,7 +12,7 @@ pipeline {
 	    steps {
 		script {
 		    // Build the Docker image 
-		    sh "docker build -t $DOCKET_IMAGE} ."
+		    sh "docker build -t $DOCKER_IMAGE} ."
      		}
 	    }
         }
@@ -20,7 +20,7 @@ pipeline {
 	    steps {
                 script {
                     // Tag Docker Image
-                    sh "docker tag $DOCKET_IMAGE} ${ARTIFACTORY_REPO_URL}/${DOCKET_IMAGE}:latest"
+                    sh "docker tag $DOCKER_IMAGE} ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest"
                 }
             }
         }
