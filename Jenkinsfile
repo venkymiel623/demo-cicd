@@ -38,8 +38,8 @@ pipeline {
              steps {
                  script {
                      // Connect to your EC2 instance (replace EC2_INSTANCE_IP with your instance's public IP)
-                     sh "ssh -i "aws-demo.pem" ec2-user@ec2-3-110-81-23.ap-south-1.compute.amazonaws.com 'docker pull ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest'"
-                     sh "ssh -i "aws-demo.pem" ec2-user@ec2-3-110-81-23.ap-south-1.compute.amazonaws.com 'docker run -d -p 80:80 ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest'"
+                     sh "ssh --i "aws-demo.pem" ec2-user@ec2-3-110-81-23.ap-south-1.compute.amazonaws.com 'docker pull ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest'"
+                     sh "ssh --i "aws-demo.pem" ec2-user@ec2-3-110-81-23.ap-south-1.compute.amazonaws.com 'docker run -d -p 80:80 ${ARTIFACTORY_REPO_URL}/${DOCKER_IMAGE}:latest'"
                   }
               }
           }
